@@ -5,7 +5,8 @@ const containerEle=document.querySelector('.container');
 containerEle.appendChild(squareBox);
 
 
-function increaseSquares (num){
-  for (i=0; i < num;i++)
+//function increaseSquares (num){
+  //for (i=0; i < num;i++)
+
 
 }
