@@ -6,9 +6,13 @@
     border: 1px solid black;
     height: 20px;
     width: 20px;
+    transition: 0.1s;
 
 }
- 
-.square:hover{
+ .square:hover {
+    background-color: black;
+ }
+
+.pixelTrail {
     background-color: black;
 }
