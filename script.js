@@ -17,4 +17,4 @@ const containerEle=document.querySelector('.container');
 }
 }
 
-increaseSquares(50,50);
+increaseSquares(35,35);
