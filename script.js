@@ -1,30 +1,28 @@
 
 //const squareBox = document.createElement('div');
 //squareBox.classList.add('square')
-//const containerEle=document.querySelector('.container');
-//containerEle.appendChild(squareBox);
 
+//containerEle.appendChild(squareBox);
+ const gridSides = 600;
+ let row = 16;
+ let col = 16;
 
 
 function increaseSquares (row,col){
-  for (let i=0; i < row;i++){
-    for (let j=0;j<col;j++){
+    const containerEle=document.querySelector('.container');
+
+  for (let i=0; i < row ;i++){
+  
 
     const squareBox = document.createElement('div');
 squareBox.classList.add('square')
-const containerEle=document.querySelector('.container');
-    containerEle.appendChild(squareBox);
+containerEle.appendChild(squareBox);
 
 
   squareBox.addEventListener ('mouseover',trailStart(squareBox));
   squareBox.addEventListener ('mouseleave',trailEnd(squareBox));
 }
 }
-}
-
-
-
-
 
 
 function trailStart(element){
@@ -35,4 +33,4 @@ function trailEnd(element){
     element.classList.remove('pixelTrail');
 }
 
-increaseSquares(35,35);
+increaseSquares(10,10);
