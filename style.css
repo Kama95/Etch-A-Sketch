@@ -30,7 +30,6 @@ flex-direction: column;}
 sketchScreen>div>{
     flex: 1;
 }
-.row:hover {
-    background: black;
-transition: 0.2ms;
+.afterClick {
+    background-color: black;
 }

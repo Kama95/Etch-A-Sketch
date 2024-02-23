@@ -14,4 +14,19 @@ function createGrid(size){
   sketchSpace.appendChild(column)
   }
 }
-createGrid(5)
+createGrid(20)
+
+function addHoverEvent(){
+  const Alldivs = document.querySelectorAll('.row');
+  Alldivs.forEach (row => {
+    row.addEventListener ('mouseover', ()=>
+    row.classList.add('afterClick'));
+    row.addEventListener ('click', ()=> 
+    row.classList.remove('afterClick'));
+  })
+  
+}
+
+
+
+addHoverEvent()
