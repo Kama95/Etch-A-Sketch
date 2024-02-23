@@ -1,5 +1,8 @@
+let size = Number(prompt('Enter a number between 2 and 100'))
 
 function createGrid(size){
+ // const size = Number(prompt('Enter a number between 2 and 100',''));
+
   const sketchSpace = document.querySelector ('.sketchScreen');
   for (let i=0;i<size;i++){
     const column = document.createElement('div');
@@ -14,7 +17,8 @@ function createGrid(size){
   sketchSpace.appendChild(column)
   }
 }
-createGrid(20)
+
+createGrid(size);
 
 function addHoverEvent(){
   const Alldivs = document.querySelectorAll('.row');
