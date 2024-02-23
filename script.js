@@ -1,8 +1,17 @@
-let size = Number(prompt('Enter a number between 2 and 100'))
+let size;
+
+const button = document.createElement('button');
+button.textContent='Change Grid Size';
+const container = document.querySelector('.container');
+container.appendChild(button)
+
+button.addEventListener('click', ()=>{
+let size = Number(prompt('Enter a number between 2 and 100'));
+createGrid(size);
+addHoverEvent();
+})
 
 function createGrid(size){
- // const size = Number(prompt('Enter a number between 2 and 100',''));
-
   const sketchSpace = document.querySelector ('.sketchScreen');
   for (let i=0;i<size;i++){
     const column = document.createElement('div');
@@ -18,6 +27,7 @@ function createGrid(size){
   }
 }
 
+
 createGrid(size);
 
 function addHoverEvent(){
@@ -30,7 +40,6 @@ function addHoverEvent(){
   })
   
 }
-
 
 
 addHoverEvent()
