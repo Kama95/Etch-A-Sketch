@@ -26,7 +26,7 @@ function createGrid(size){
 }
 
 
-createGrid(size);
+createGrid(16);
 
 function addHoverEvent(){
   const Alldivs = document.querySelectorAll('.row');
@@ -47,6 +47,7 @@ function deleteGrid(){
   const sketchSpace = document.querySelector('.sketchScreen');
     sketchSpace.innerHTML='';
 }
+
 
 addHoverEvent()
 
