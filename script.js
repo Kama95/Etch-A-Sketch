@@ -59,7 +59,8 @@ function deleteGrid(){
 }
 
 
-addHoverEvent()
+addHoverEvent();
+addTouchOver();
 
 button.addEventListener('click',()=>{
   deleteGrid();
