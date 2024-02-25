@@ -1,29 +1,5 @@
 let size;
 
-<<<<<<< HEAD
-//const squareBox = document.createElement('div');
-//squareBox.classList.add('square')
-
-//containerEle.appendChild(squareBox);
- const gridSides = 600;
- let row = 16;
- let col = 16;
-
-
-function increaseSquares (row,col){
-    const containerEle=document.querySelector('.container');
-
-  for (let i=0; i < row ;i++){
-  
-
-    const squareBox = document.createElement('div');
-squareBox.classList.add('square')
-containerEle.appendChild(squareBox);
-
-
-  squareBox.addEventListener ('mouseover',trailStart(squareBox));
-  squareBox.addEventListener ('mouseleave',trailEnd(squareBox));
-=======
 const button = document.createElement('button');
 button.textContent='Change Grid Size';
 const container = document.querySelector('.container');
@@ -49,7 +25,6 @@ function createGrid(size){
 
   sketchSpace.appendChild(column)
   }
->>>>>>> EtchAsketch
 }
 
 createGrid(16);
@@ -63,18 +38,6 @@ function addHoverEvent(){
   }) 
 }
 
-<<<<<<< HEAD
-
-function trailStart(element){
-    element.classList.add('pixelTrail');
-}
-
-function trailEnd(element){
-    element.classList.remove('pixelTrail');
-}
-
-increaseSquares(10,10);
-=======
 function removeClass(){ 
   const Alldivs = document.querySelectorAll('.row');
   Alldivs.forEach(row => {
@@ -102,4 +65,3 @@ else{
   
 
   })
->>>>>>> EtchAsketch
