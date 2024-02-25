@@ -5,6 +5,8 @@ button.textContent='Change Grid Size';
 const container = document.querySelector('.container');
 container.appendChild(button)
 
+const sketchContainer = document.querySelector ('.sketchContainer')
+container.appendChild(sketchContainer);
 const sketchSpace =document.querySelector('.sketchScreen');
 
 
