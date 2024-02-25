@@ -5,11 +5,9 @@ button.textContent='Change Grid Size';
 const container = document.querySelector('.container');
 container.appendChild(button)
 
-button.addEventListener('click', ()=>{
-let size = Number(prompt('Enter a number between 2 and 100'));
-createGrid(size);
-addHoverEvent();
-})
+const sketchSpace =document.querySelector('.sketchScreen');
+
+
 
 function createGrid(size){
   const sketchSpace = document.querySelector ('.sketchScreen');
@@ -35,11 +33,28 @@ function addHoverEvent(){
   Alldivs.forEach (row => {
     row.addEventListener ('mouseover', ()=>
     row.classList.add('afterClick'));
-    row.addEventListener ('click', ()=> 
-    row.classList.remove('afterClick'));
-  })
-  
+
+  }) 
 }
 
+function removeClass(){ 
+  const Alldivs = document.querySelectorAll('.row');
+  Alldivs.forEach(row => {
+    row.classList.remove('afterClick');
+  })
+}
+function deleteGrid(){
+  const sketchSpace = document.querySelector('.sketchScreen');
+    sketchSpace.innerHTML='';
+}
 
 addHoverEvent()
+
+button.addEventListener('click',()=>{
+  deleteGrid();
+  let size = Number(prompt('Enter a number between 2 and 100'));
+  createGrid(size);
+  addHoverEvent();
+  
+
+  })
