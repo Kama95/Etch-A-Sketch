@@ -38,6 +38,15 @@ function addHoverEvent(){
   }) 
 }
 
+function addTouchOver(){
+  const Alldivs = document.querySelectorAll('.row');
+  Alldivs.forEach (row => {
+    row.addEventListener ('touchmove', ()=>
+    row.classList.add('afterClick'));
+
+  }) 
+}
+
 function removeClass(){ 
   const Alldivs = document.querySelectorAll('.row');
   Alldivs.forEach(row => {
@@ -62,6 +71,5 @@ button.addEventListener('click',()=>{
 else{
   createGrid(size)
   addHoverEvent();}
-  
-
   })
+
