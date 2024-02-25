@@ -25,7 +25,6 @@ function createGrid(size){
   }
 }
 
-
 createGrid(16);
 
 function addHoverEvent(){
@@ -54,8 +53,13 @@ addHoverEvent()
 button.addEventListener('click',()=>{
   deleteGrid();
   let size = Number(prompt('Enter a number between 2 and 100'));
-  createGrid(size);
-  addHoverEvent();
+  if (size < 2 || size > 100)
+  { 
+    sketchSpace.innerHTML= "Ivalid Input. Enter any number between 2 and 100"
+}
+else{
+  createGrid(size)
+  addHoverEvent();}
   
 
   })
