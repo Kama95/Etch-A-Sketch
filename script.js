@@ -27,23 +27,16 @@ function createGrid(size){
   }
 }
 
+
+
 createGrid(16);
 
 function addHoverEvent(){
   const Alldivs = document.querySelectorAll('.row');
   Alldivs.forEach (row => {
     row.addEventListener ('mouseover', ()=>
-    row.classList.add('afterClick'));
-
-  }) 
-}
-
-function addTouchOver(){
-  const Alldivs = document.querySelectorAll('.row');
-  Alldivs.forEach (row => {
-    row.addEventListener ('touchmove', ()=>
-    row.classList.add('afterClick'));
-
+    //row.classList.add('afterClick'));
+    changeColorHover(row));
   }) 
 }
 
@@ -60,7 +53,13 @@ function deleteGrid(){
 
 
 addHoverEvent();
-addTouchOver();
+
+function changeColorHover (element){
+const randomColor = `rgb(${Math.random() * 255},${Math.random() * 255},${Math.random() * 255})`;
+element.style.backgroundColor = randomColor;
+}
+
+
 
 button.addEventListener('click',()=>{
   deleteGrid();
